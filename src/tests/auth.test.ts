@@ -16,7 +16,7 @@ describe("getAPIKey", () => {
     });
 
     it("returns the api key when ApiKey header is valid", () => {
-        expect(getAPIKey({ authorization: "ApiKey abc123" })).toBe("wrong");
+        expect(getAPIKey({ authorization: "ApiKey abc123" })).toBe("abc123");
     });
 
     it("returns the second segment when extra segments are present", () => {
